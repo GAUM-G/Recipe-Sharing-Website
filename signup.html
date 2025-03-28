@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | GetSetRecipe</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <img src="https://img.icons8.com/color/96/chef-hat.png" class="graphic chef-hat" alt="Chef Hat">
+        <h2>SIGN UP</h2>
+        <form id="signupForm">
+            <label>Name:</label>
+            <input type="text" id="name">
+            <div class="error" id="nameError"></div>
+            <label>Username:</label>
+            <input type="text" id="username">
+            <div class="error" id="usernameError"></div>
+            <label>Phone Number:</label>
+            <input type="tel" id="number">
+            <div class="error" id="numberError"></div>
+            <label>Gmail Id:</label>
+            <input type="text" id="gmail">
+            <div class="error" id="gmailError"></div>
+            <label>Set Password:</label>
+            <input type="password" id="password">
+            <div class="error" id="passwordError"></div>
+            <label>Retype Password:</label>
+            <input type="password" id="confirmPassword">
+            <div class="error" id="confirmPasswordError"></div>
+            <button type="submit">SIGN UP</button>
+        </form>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
