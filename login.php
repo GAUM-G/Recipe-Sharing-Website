@@ -1,6 +1,6 @@
 <?php
-session_start(); // Start session to store user data
-include "db.php"; // Include database connection
+session_start(); // Start session
+include "db.php"; // Database connection
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     $username = trim($_POST['username']); 
@@ -18,15 +18,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Check if the user exists
+    // Check if user exists
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
 
-        // Verify password with hashed value in database
+        // Verify password
         if (password_verify($password, $row['password'])) {
-            $_SESSION['username'] = $username; // Store username in session
-            echo "Login successful! Redirecting...";
-            header("refresh:1; url=homepage.html"); // Redirect after 2 seconds
+            $_SESSION['username'] = $username; // Store session
+            header("Location: homepage.html"); // Instant redirect
+            exit(); // Stop script execution
         } else {
             echo "Incorrect password!";
         }
