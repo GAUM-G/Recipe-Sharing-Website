@@ -1,0 +1,194 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* Header */
+header {
+    background-color: #691500;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 80px;
+    width: auto;
+    margin-left: 35px;
+    transition: transform 0.3s ease-in-out;
+    display: block;
+}
+
+.logo-container img:hover {
+    transform: scale(1.2);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: block;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-left: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburger-menu:hover {
+    transform: scale(1.2);
+}
+
+.hamburger-menu div {
+    width: 40px;
+    height: 8px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+/* Side Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 199px;
+    height: 100%;
+    background-color: #691500;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid #ddd;
+}
+
+.side-menu a:hover {
+    background-color: #928ba5;
+}
+
+/* Close Button */
+.close-menu-btn {
+    background-color: #928ba5;
+    color: white;
+    border: none;
+    padding: 18px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: -35px;
+    margin-left: 28px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.close-menu-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.search-bar {
+    padding: 12px 15px;
+    width: 390px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    margin-left: -80px; 
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Search Button */
+.search-button {
+    padding: 15px;
+    background-color: #928ba5;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.search-button i {
+    color: white;
+    font-size: 18px;
+}
+
+/* Hover Effect on Search Button */
+.search-button:hover {
+    background-color: #7a7196;
+    transform: scale(1.1);
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Increased space between buttons */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.auth-buttons button {
+    padding: 15px 20px; /* Uniform padding */
+    min-width: 120px; /* Ensures same width for both buttons */
+    text-align: center;
+    background-color: #928ba5;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.auth-buttons button:hover {
+    background-color: #7a7196;
+    transform: scale(1.1);
+}
