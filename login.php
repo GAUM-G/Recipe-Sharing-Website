@@ -1,0 +1,40 @@
+<?php
+session_start(); // Start session to store user data
+include "db.php"; // Include database connection
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+    $username = trim($_POST['username']); 
+    $password = trim($_POST['password']);
+
+    if (empty($username) || empty($password)) {
+        echo "Username and password cannot be empty!";
+        exit();
+    }
+
+    // Query to find user by username
+    $sql = "SELECT * FROM users WHERE username=?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Check if the user exists
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+
+        // Verify password with hashed value in database
+        if (password_verify($password, $row['password'])) {
+            $_SESSION['username'] = $username; // Store username in session
+            echo "Login successful! Redirecting...";
+            header("refresh:1; url=homepage.html"); // Redirect after 2 seconds
+        } else {
+            echo "Incorrect password!";
+        }
+    } else {
+        echo "User not found!";
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>
