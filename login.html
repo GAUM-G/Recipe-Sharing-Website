@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | GetSetRecipe</title>
+    <style>
+        body {
+            background-color: #FCF596;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        .login-container {
+            background: #FAB12F;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            position: relative;
+            z-index: 2;
+        }
+        h2 {
+            color: #fff;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        label {
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            text-align: left;
+            margin-top: 5px;
+        }
+        button {
+            background: #FA812F;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #FA4032;
+        }
+        .food-graphic {
+            position: absolute;
+            width: 80px;
+            opacity: 0.9;
+        }
+        .pizza { top: 10%; left: 10%; transform: rotate(-10deg); }
+        .burger { top: 70%; left: 15%; transform: rotate(15deg); }
+        .taco { top: 20%; right: 15%; transform: rotate(-15deg); }
+        .salad { bottom: 10%; right: 10%; transform: rotate(10deg); }
+    </style>
+</head>
+<body>
+    <img src="https://img.icons8.com/color/96/pizza.png" class="food-graphic pizza" alt="Pizza">
+    <img src="https://img.icons8.com/color/96/hamburger.png" class="food-graphic burger" alt="Burger">
+    <img src="https://img.icons8.com/color/96/taco.png" class="food-graphic taco" alt="Taco">
+    <img src="https://img.icons8.com/color/96/salad.png" class="food-graphic salad" alt="Salad">
+    
+    <div class="login-container">
+        <h2>LOGIN</h2>
+        <form id="loginForm" action="login.php" method="POST">
+            <label>Username:</label>
+            <input type="text" name="username" id="username">
+            <div class="error" id="usernameError"></div>
+            <label>Password:</label>
+            <input type="password" name="password" id="password">
+            <div class="error" id="passwordError"></div>
+            <button type="submit">Login</button>
+        </form>        
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
