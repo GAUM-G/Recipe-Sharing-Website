@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO users (name, username, phone, email, password) VALUES ('$name', '$username', '$phone', '$email', '$password')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Sign up successful!'); window.location.href = 'signup.html';</script>";
+        echo "<script>alert('Sign up successful!'); window.location.href = 'homepage.html';</script>";
     } else {
         echo "Error: " . $conn->error;
     }
