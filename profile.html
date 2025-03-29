@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | GetSetRecipe</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome, <span id="usernameDisplay"></span></h1>
+        <button id="logoutBtn">Logout</button>
+    </header>
+
+    <section class="profile-section">
+        <h2>Edit Profile</h2>
+        <form id="editProfileForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" pattern="[0-9]{10}" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" rows="3"></textarea>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </section>
+
+    <section class="recipe-section">
+        <h2>Add a Recipe</h2>
+        <form id="addRecipeForm" enctype="multipart/form-data">
+            <label for="recipeTitle">Recipe Title:</label>
+            <input type="text" id="recipeTitle" required>
+
+            <label for="recipeImage">Upload Image:</label>
+            <input type="file" id="recipeImage" accept="image/*">
+
+            <label for="recipeVideo">Upload Video:</label>
+            <input type="file" id="recipeVideo" accept="video/*">
+
+            <label for="recipeSteps">Steps:</label>
+            <textarea id="recipeSteps" rows="4" required></textarea>
+
+            <label for="recipeBenefits">Benefits:</label>
+            <textarea id="recipeBenefits" rows="3"></textarea>
+
+            <label for="recipeContents">Ingredients:</label>
+            <textarea id="recipeContents" rows="3" required></textarea>
+
+            <button type="submit">Submit Recipe</button>
+        </form>
+    </section>
+
+    <script src="profile.js"></script>
+</body>
+</html>
