@@ -1,0 +1,122 @@
+body {
+    background-color: #FCF596;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #FA812F;
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.profile-section, .recipe-section {
+    margin: 30px auto;
+    padding: 50px;
+    border-radius: 12px;
+    max-width: 900px;
+    width: 90%;
+    background-color: white;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+h2 {
+    color: #FA812F;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #FA4032;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+label {
+    color: #FA812F;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-top: 12px;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background: #FA4032;
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #FAB12F;
+}
+
+button:active {
+    background: #d84315;
+}
+
+.logout-button {
+    background: #D84315;
+    padding: 6px 12px;
+    font-size: 14px;
+    min-width: unset; /* Removed min-width */
+    border-radius: 5px;
+    margin: 0; /* Remove any default margins */
+    display: inline-block; /* Makes it only as wide as its content */
+}
+
+.form-button {
+    width: 100%;
+    padding: 14px 22px;
+}
+
+input[type="password"] {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .profile-section, .recipe-section {
+        width: 95%;
+        padding: 30px;
+    }
+    
+    .logout-button {
+        padding: 5px 10px;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+}
