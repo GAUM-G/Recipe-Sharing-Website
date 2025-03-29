@@ -39,7 +39,7 @@ header {
 }
 
 .logo-container img {
-    height: 82px;
+    height: 80px;
     width: auto;
     margin-left: 35px;
     transition: transform 0.3s ease-in-out;
@@ -75,13 +75,18 @@ header {
 .side-menu {
     position: fixed;
     top: 0;
-    left: -250px;
-    width: 199px;
+    left: -250px; /* Initially hidden */
+    width: 190px;
     height: 100%;
     background-color: #691500;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     transition: left 0.3s ease-in-out;
     padding-top: 60px;
+}
+
+/* Open Class for Side Menu */
+.side-menu.open {
+    left: 0; /* Brings menu into view */
 }
 
 .side-menu a {
@@ -101,12 +106,12 @@ header {
     background-color: #928ba5;
     color: white;
     border: none;
-    padding: 18px 16px;
+    padding: 17px 16px;
     border-radius: 20px;
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 15px;
     margin-top: -35px;
     margin-left: 28px;
     margin-bottom: 20px;
@@ -131,12 +136,12 @@ nav {
 }
 
 .search-bar {
-    padding: 17px;
+    padding: 12px 15px;
     width: 390px;
     border-radius: 25px;
     border: 1px solid #ccc;
     outline: none;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: -80px; 
     animation: fadeIn 0.5s ease-in-out;
 }
@@ -170,20 +175,18 @@ nav {
 .auth-buttons {
     display: flex;
     align-items: center;
-    gap: 25px; /* Increased space between buttons */
     animation: fadeIn 0.5s ease-in-out;
 }
 
 .auth-buttons button {
-    padding: 15px 20px; /* Uniform padding */
-    min-width: 120px; /* Ensures same width for both buttons */
-    text-align: center;
+    padding: 15px 16px; 
+    margin-left: 10px;
     background-color: #928ba5;
     border: none;
     border-radius: 5px;
     color: white;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     animation: fadeIn 0.5s ease-in-out;
     transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 }
