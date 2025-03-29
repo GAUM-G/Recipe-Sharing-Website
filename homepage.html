@@ -16,7 +16,7 @@
                 <div></div>
                 <div></div>
             </div>
-            <img src="logo.png" alt="Recipe Image">
+            <img src="logo.png" alt="Recipe Image" onclick="location.reload();">
         </div>
 
         <nav>
@@ -25,21 +25,18 @@
                 <button class="search-button"><i class="fas fa-search"></i></button>
             </div>
         </nav>
-        
 
-        <div class="auth-buttons">
-            <button>Login</button>
-            <button>Signup</button>
+        <div id="authButtons" class="auth-buttons">
+            <button id="loginBtn" onclick="window.location.href='login.html'">Login</button>
+            <button id="signupBtn" onclick="window.location.href='signup.html'">Signup</button>
         </div>
     </header>
 
     <div id="sideMenu" class="side-menu">
-        <button class="close-menu-btn" onclick="toggleMenu()">
-            &#x25C0; Close menu
-        </button>
-        <a href="#">Home</a>
+        <button class="close-menu-btn" onclick="toggleMenu()">&#x25C0; Close menu</button>
+        <a href="homepage.html">Home</a>
         <a href="#">Categories</a>
-        <a href="#">About Us</a>
+        <a href="aboutus.html">About Us</a>
     </div>
 
     <script src="homepage.js"></script>
